@@ -1,0 +1,20 @@
+model:
+  type: "faster_rcnn"  #--- Available:  "faster_rcnn" and "fastai"
+
+paths:
+  train_data: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/train"
+  train_annotations: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/train/_annotations.coco.json"
+  val_data: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/valid"
+  val_annotations: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/valid/_annotations.coco.json"
+  model_save_path: "Z:/VSC/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_TEST.pth"
+  model_load_path: "Z:/VSC/projects/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_v3.pth" 
+
+
+training:
+  batch_size: 4
+  num_epochs: 5
+  learning_rate: 0.005
+  momentum: 0.9
+  weight_decay: 0.0005
+  num_classes: 13  #--- 12 handsigns + background
+  resize: [224, 224]
