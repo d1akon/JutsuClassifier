@@ -1,18 +1,18 @@
 model:
-  type: "faster_rcnn"  #--- Available:  "faster_rcnn" and "fastai"
+  type: "fastai"  #--- Available:  "faster_rcnn" and "fastai"
 
 paths:
   #----- faster_rcnn
-  train_data: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/train"
-  train_annotations: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/train/_annotations.coco.json"
-  val_data: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/valid"
-  val_annotations: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/valid/_annotations.coco.json"
-  frcnn_model_save_path: "Z:/VSC/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_TEST.pth"
-  frcnn_model_load_path: "Z:/VSC/projects/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_v3.pth"
+  train_data: "FASTER_RCNN_TRAINING_DATASET_PATH"
+  train_annotations: "FASTER_RCNN_TRAINING_ANNOTATIONS_PATH"
+  val_data: "FASTER_RCNN_VALIDATION_DATASET_PATH"
+  val_annotations: "FASTER_RCNN_VALIDATION_ANNOTATIONS_PATH"
+  frcnn_model_save_path: "FASTER_RCNN_MODEL_SAVE_PATH"
+  frcnn_model_load_path: "FASTER_RCNN_MODEL_LOAD_PATH"
   #----- fastai
-  fastai_data: "Z:/VSC/projects/naruto-signs-cv/Pure Naruto Hand Sign Data"
-  fastai_model_save_path: "Z:/VSC/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_TEST.pth"
-  fastai_model_load_path: "Z:/VSC/projects/projects_github/JutsuClassifier/data/output_model/modelv3.pkl"
+  fastai_data: "FASTAI_TRAINING_DATASET_PATH"
+  fastai_model_save_path: "FASTAI_MODEL_SAVE_PATH"
+  fastai_model_load_path: "FASTAI_MODEL_LOAD_PATH"
 
 rcnn_training:
   batch_size: 4
