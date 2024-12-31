@@ -14,9 +14,9 @@ def get_model(num_classes):
 def save_model(model, path):
     torch.save(model.state_dict(), path)
 
-
 def load_model(path, num_classes):
     model = get_model(num_classes)
-    state_dict = torch.load(path)  #----- Cargar el estado del modelo
-    model.load_state_dict(state_dict)  #----- Cargar los pesos en el modelo
+    state_dict = torch.load(path)  #--- Load model's state
+    model.load_state_dict(state_dict)  #--- Load weights into the model
     return model
+

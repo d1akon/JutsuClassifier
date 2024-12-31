@@ -2,15 +2,19 @@ model:
   type: "faster_rcnn"  #--- Available:  "faster_rcnn" and "fastai"
 
 paths:
+  #----- faster_rcnn
   train_data: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/train"
   train_annotations: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/train/_annotations.coco.json"
   val_data: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/valid"
   val_annotations: "Z:/VSC/projects/naruto-signs-cv/coco_dataset/valid/_annotations.coco.json"
-  model_save_path: "Z:/VSC/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_TEST.pth"
-  model_load_path: "Z:/VSC/projects/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_v3.pth" 
+  frcnn_model_save_path: "Z:/VSC/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_TEST.pth"
+  frcnn_model_load_path: "Z:/VSC/projects/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_v3.pth"
+  #----- fastai
+  fastai_data: "Z:/VSC/projects/naruto-signs-cv/Pure Naruto Hand Sign Data"
+  fastai_model_save_path: "Z:/VSC/projects_github/JutsuClassifier/data/output_model/faster_rcnn_naruto_TEST.pth"
+  fastai_model_load_path: "Z:/VSC/projects/projects_github/JutsuClassifier/data/output_model/modelv3.pkl"
 
-
-training:
+rcnn_training:
   batch_size: 4
   num_epochs: 5
   learning_rate: 0.005
@@ -18,3 +22,22 @@ training:
   weight_decay: 0.0005
   num_classes: 13  #--- 12 handsigns + background
   resize: [224, 224]
+
+fastai_training:
+  learning_rate: 3e-3
+  epochs: 10
+
+labels:
+  id_to_name:
+    1: "bird"
+    2: "boar"
+    3: "dog"
+    4: "dragon"
+    5: "hare"
+    6: "horse"
+    7: "monkey"
+    8: "ox"
+    9: "ram"
+    10: "rat"
+    11: "snake"
+    12: "tiger"
